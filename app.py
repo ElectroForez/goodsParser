@@ -12,7 +12,7 @@ window.geometry('450x200')
 
 
 def click_upload():
-    file = filedialog.askopenfile(filetypes=[('xlsx-файлы', '*.xlsx')])
+    file = filedialog.askopenfile(filetypes=[('xlsx-файлы', '*.xlsx'), ('Все файлы', '*.*')])
     if file is None:
         print('Отмена выбора файла')
         return
@@ -46,7 +46,7 @@ lblSep = Label(window, text="Разделитель", font=default_font)
 lblSep.grid(column=0, row=0)
 
 comboSep = Combobox(window, width=2, state='readonly', font=default_font)
-comboSep['values'] = [';', ',', '.']
+comboSep['values'] = separators
 comboSep.current(0)
 comboSep.grid(column=1, row=0)
 
