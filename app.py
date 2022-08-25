@@ -45,7 +45,7 @@ def click_save():
 lblSep = Label(window, text="Разделитель", font=default_font)
 lblSep.grid(column=0, row=0)
 
-comboSep = Combobox(window, width=2, state='readonly')
+comboSep = Combobox(window, width=2, state='readonly', font=default_font)
 comboSep['values'] = [';', ',', '.']
 comboSep.current(0)
 comboSep.grid(column=1, row=0)
