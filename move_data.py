@@ -3,7 +3,7 @@ import re
 from numpy import NaN
 
 
-def move_data_to_csv(filename, new_filename='untitled.csv'):
+def move_data_to_csv(filename, new_filename='untitled.csv', sep=';'):
     def split_title(title):
         result = {}
         pattern = r'[ ]+(\w*(\d|-)+|DIN).*'
@@ -26,7 +26,7 @@ def move_data_to_csv(filename, new_filename='untitled.csv'):
     df = df.drop(title_column, axis=1)
 
     df_wo_legend = df.iloc[:, :-2]  # legend exists from right size
-    df_wo_legend.to_csv(new_filename, sep=';', header=False, index=False)
+    df_wo_legend.to_csv(new_filename, sep=sep, header=False, index=False)
 
 
 if __name__ == '__main__':
