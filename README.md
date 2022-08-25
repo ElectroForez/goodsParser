@@ -5,6 +5,6 @@
 `pip install -r requirments.txt`
 
 # Запуск
-`python3 app.py # для ubuntu`
+`python3 app.py` # для ubuntu
 
 
